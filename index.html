@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="MyBlog.css" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MyBlog</title>
+        <style></style>
+    </head>
+    <body>
+        <div onclick="toggle()" class="box">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="logo">
+            <img
+                class="logo-icon"
+                src="https://i.postimg.cc/1Xfz8Pvy/Photo-1714177997732-2.png"
+                type="image/webp"
+            />
+            <div class="logo-name">XYPH</div>
+        </div>
+        <div id="dyMenu" class="menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <a onClick="setClick()" class="set" id="setting" href="#"
+                >Setting »</a
+            >
+        </div>
+        <div id="setMenu" class="set-menu">
+            <span onClick="dark()" id="dark">Dark/Light</span>
+            <span>Theme</span>
+        </div>
+        <input
+            class="search-bar"
+            type="text"
+            id="searchInput"
+            onkeyup="searchFunction()"
+            placeholder="Search for names..."
+        />
+        <button id="buttonBar" type="submit" class="submit" onClick="send()">
+            Search
+        </button>
+        <ul class="list" id="nameList"></ul>
+
+        <div class="categoryIcon" onClick="catMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="menu-box" id="categoryMenu">
+            <a href="#">Arcade</a>
+            <a href="#">Puzzle</a>
+            <a href="#">Racing</a>
+            <a href="#">Adventure</a>
+            <a href="#">Board</a>
+            <a href="#">Flight</a>
+            <a href="#">Action</a>
+            <a href="#">Kids</a>
+            <a href="#">Simulations</a>
+            <a href="#">Offline</a>
+            <a href="#">Online</a>
+            <a href="#">More</a>
+        </div>
+        <!-- Content Goes Here -->
+        <div class="card">
+            <div class="icons">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="#ff0000"
+                    width="20"
+                    height="20"
+                    stroke="#ff0000"
+                    stroke-width="0"
+                >
+                    <path
+                        fill-rule="evenodd"
+                        d="M10 4.748l-.717-.737C7.6 2.281 4.514 2.878 3.4 5.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.837-3.362.314-4.385-1.114-2.175-4.2-2.773-5.883-1.043L10 4.748zM10 17C-5.333 6.868 5.279-1.04 9.824 3.143c.06.055.119.112.176.171a3.12 3.12 0 01.176-.17C14.72-1.042 25.333 6.867 10 17z"
+                        clip-rule="evenodd"
+                    ></path>
+                </svg>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="#0000ff"
+                    width="20"
+                    height="20"
+                    stroke="#000000"
+                    stroke-width="0"
+                >
+                    <path
+                        fill-rule="evenodd"
+                        d="M8.207 13.293L7.5 14a5.5 5.5 0 110-11h5a5.5 5.5 0 110 11s-1.807 2.169-4.193 2.818C7.887 16.933 7.449 17 7 17c.291-.389.488-.74.617-1.052C8.149 14.649 7.5 14 7.5 14c.707-.707.708-.707.708-.706h.001l.002.003.004.004.01.01a1.184 1.184 0 01.074.084c.039.047.085.108.134.183.097.15.206.36.284.626.114.386.154.855.047 1.394.717-.313 1.37-.765 1.895-1.201a10.266 10.266 0 001.013-.969l.05-.056.01-.012m0 0A1 1 0 0112.5 13a4.5 4.5 0 100-9h-5a4.5 4.5 0 000 9 1 1 0 01.707.293"
+                        clip-rule="evenodd"
+                    ></path>
+                </svg>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="#00ff00"
+                    width="20"
+                    height="20"
+                    stroke="#000000"
+                    stroke-width="0"
+                >
+                    <path
+                        fill-rule="evenodd"
+                        d="M11.502 7.013a.144.144 0 00-.202.134V8.3a.5.5 0 01-.5.5c-.667 0-2.013.005-3.3.822-.984.624-1.99 1.76-2.595 3.876 1.02-.983 2.185-1.516 3.205-1.799a8.745 8.745 0 011.921-.306 7.468 7.468 0 01.798.008h.013l.005.001h.001l-.048.498.05-.498a.5.5 0 01.45.498v1.153c0 .108.11.176.202.134l3.984-2.933a.522.522 0 01.042-.028.147.147 0 000-.252.51.51 0 01-.042-.028l-3.984-2.933zM10.3 12.386a7.745 7.745 0 00-1.923.277c-1.326.368-2.896 1.201-3.94 3.08a.5.5 0 01-.933-.305c.464-3.71 1.886-5.662 3.46-6.66 1.245-.79 2.527-.942 3.336-.971v-.66a1.144 1.144 0 011.767-.96l3.994 2.94a1.147 1.147 0 010 1.946l-3.994 2.94a1.144 1.144 0 01-1.767-.96v-.667z"
+                        clip-rule="evenodd"
+                    ></path>
+                </svg>
+            </div>
+            <div>
+                <img
+                    class="card-image"
+                    src="https://i.postimg.cc/66dykH0z/1714414999667.jpg"
+                    loading="lazy"
+                />
+            </div>
+
+            <script src="MyBlog.js"></script>
+        </div>
+    </body>
+</html>
